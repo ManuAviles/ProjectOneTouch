@@ -1,4 +1,4 @@
 package com.iesemilidarder.maviles.data;
 
-public class Restaurants extends Productes {
+public class Restaurants extends Products {
 }
