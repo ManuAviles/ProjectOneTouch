@@ -1,5 +1,8 @@
 package com.iesemilidarder.maviles.data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Activities extends Products {
 
     private String name;
@@ -29,4 +32,8 @@ public class Activities extends Products {
     public void setCountry(String country) {
         Country = country;
     }
+
+
+
+
 }

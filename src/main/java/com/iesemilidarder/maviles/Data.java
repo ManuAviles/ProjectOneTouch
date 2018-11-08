@@ -7,10 +7,37 @@ import java.util.List;
 
 public class Data {
 
-    private  static List<Data> products = new ArrayList<>();
+    public static List<String> getActivities() {
 
 
-    public static List<Data> getProducts(){
+        List<String> activity = new ArrayList<>();
+
+        activity.add("Escalada ");
+        activity.add("Buceo");
+        activity.add("Surf");
+
+        return activity;
+    }
+
+    public static List<String> getCountries() {
+
+
+        List<String> country = new ArrayList<>();
+
+        country.add("España");
+        country.add("Portugal");
+        country.add("Francia");
+
+        return country;
+    }
+
+
+
+
+    private static List<String> products = new ArrayList<>();
+
+
+    public static List<String> getProducts(){
         doInit();
 
         return products;
@@ -18,11 +45,11 @@ public class Data {
 
     private static void doInit() {
 
-        for ( String a : ListCountries.getCountries()){
+        for ( String a : Data.getCountries()){
 
-                System.out.println(a);
+                System.out.println("" +a+ "<br/>");
 
-            for ( String b : ListActivities.getActivities()){
+            for ( String b : Data.getActivities()){
 
                 System.out.println(b);
 
