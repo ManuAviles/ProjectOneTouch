@@ -1,50 +1,34 @@
 package com.iesemilidarder.maviles;
 
-import com.iesemilidarder.maviles.data.Activities;
-import com.iesemilidarder.maviles.data.Countries;
-import com.iesemilidarder.maviles.data.Country;
-import com.iesemilidarder.maviles.data.Products;
+import com.iesemilidarder.maviles.data.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Data {
-    
-    private static List<Countries> list = new ArrayList<>();
-    
-    public static List<Countries> getList(){
+
+    private  static List<Data> products = new ArrayList<>();
+
+
+    public static List<Data> getProducts(){
         doInit();
-        return list;
+
+        return products;
     }
 
-    private static void doInit(){
-        if (list.isEmpty()){
-            for(int i =0;i<50;i++){
-                Country country = new Country();
-                country.setName("Name"+i);
-                list.add(country);
+    private static void doInit() {
+
+        for ( String a : ListCountries.getCountries()){
+
+                System.out.println(a);
+
+            for ( String b : ListActivities.getActivities()){
+
+                System.out.println(b);
+
             }
         }
+
     }
-
-    private static List<Products> listproducts = new ArrayList<>();
-
-    public static List<Products> getListproducts() {
-        doInit2();
-        return listproducts;
-    }
-
-    private static void doInit2(){
-        if (listproducts.isEmpty()){
-            for(int i =0;i<50;i++){
-                Activities activities = new Activities();
-                activities.setName("Name"+i);
-                activities.setCountry("Name"+i);
-                listproducts.add(activities);
-            }
-        }
-    }
-
-
-
 }
+
