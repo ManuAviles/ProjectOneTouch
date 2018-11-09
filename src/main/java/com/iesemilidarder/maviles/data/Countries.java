@@ -1,13 +1,26 @@
 package com.iesemilidarder.maviles.data;
 
-public abstract class Countries {
 
-    private String name;
+import java.util.List;
+
+public  class Countries {
+
     private Integer code;
+    private String name;
     private String capital;
 
-    public String getName() {
-        return name;
+    public Countries(String name, Integer code, String capital) {
+        this.code = code;
+        this.name = name;
+        this.capital = capital;
+    }
+
+    public Countries() {
+
+    }
+
+    public String getName(String name) {
+        return this.name;
     }
 
     public void setName(String name) {
@@ -29,5 +42,4 @@ public abstract class Countries {
     public void setCapital(String capital) {
         this.capital = capital;
     }
-
 }

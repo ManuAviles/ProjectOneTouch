@@ -19,43 +19,46 @@ public class Data {
         return activity;
     }
 
-    public static List<String> getCountries() {
+    public static List<Countries> getCountries() {
 
 
-        List<String> country = new ArrayList<>();
+        List<Countries> lista = new ArrayList<>();
+        Countries countries = new Countries("España",1,"Madrid");
+        Countries countries2 = new Countries("Portugal",2,"Lisboa");
+        Countries countries3 = new Countries("Francia",3,"París");
 
-        country.add("España");
-        country.add("Portugal");
-        country.add("Francia");
+        lista.add(countries);
+        lista.add(countries2);
+        lista.add(countries3);
 
-        return country;
+        return lista;
     }
 
 
 
-
-    private static List<String> products = new ArrayList<>();
+    public static List<String> items = new ArrayList<>();
 
 
     public static List<String> getProducts(){
         doInit();
 
-        return products;
+        return items;
     }
 
     private static void doInit() {
 
-        for ( String a : Data.getCountries()){
 
-                System.out.println("" +a+ "<br/>");
+        for ( Countries a : Data.getCountries()){
+
+
 
             for ( String b : Data.getActivities()){
 
-                System.out.println(b);
 
             }
         }
 
     }
+
 }
 
