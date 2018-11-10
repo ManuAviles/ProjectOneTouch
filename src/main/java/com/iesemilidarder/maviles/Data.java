@@ -1,64 +1,35 @@
 package com.iesemilidarder.maviles;
 
-import com.iesemilidarder.maviles.data.*;
+import com.iesemilidarder.maviles.data.Activities;
+import com.iesemilidarder.maviles.data.Country;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
 
 public class Data {
 
-    public static List<String> getActivities() {
+    public  static List<String> getProduct(){
+
+        List<String> lista = new ArrayList<String>();
 
 
-        List<String> activity = new ArrayList<>();
-
-        activity.add("Escalada ");
-        activity.add("Buceo");
-        activity.add("Surf");
-
-        return activity;
-    }
-
-    public static List<Countries> getCountries() {
+           for ( int i = 0; i < Country.getCountries().size(); i++) {
 
 
-        List<Countries> lista = new ArrayList<>();
-        Countries countries = new Countries("España",1,"Madrid");
-        Countries countries2 = new Countries("Portugal",2,"Lisboa");
-        Countries countries3 = new Countries("Francia",3,"París");
+               Country country = new Country();
+               country.setName(Country.count);
 
-        lista.add(countries);
-        lista.add(countries2);
-        lista.add(countries3);
+               for (int x = 0; x < Activities.getActivities().size(); x++) {
+
+                   Activities activities = new Activities();
+                   activities.setName(Activities.act);
+               }
+           }
 
         return lista;
     }
 
-
-
-    public static List<String> items = new ArrayList<>();
-
-
-    public static List<String> getProducts(){
-        doInit();
-
-        return items;
     }
-
-    private static void doInit() {
-
-
-        for ( Countries a : Data.getCountries()){
-
-
-
-            for ( String b : Data.getActivities()){
-
-
-            }
-        }
-
-    }
-
-}
 
