@@ -1,31 +1,99 @@
 package com.iesemilidarder.maviles.data;
 
+import com.iesemilidarder.maviles.apiservices.ProductType;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import static com.iesemilidarder.maviles.apiservices.ProductType.getProductType;
 
 public class Activities extends Product {
     public static HashMap act;
 
     // atributos
 
+    private Integer id;
     private String name;
+    private String place;
+    private Double price;
     private String duration;
     private String description;
 
-    public Activities() {
 
+        // Constructor
+
+    public Activities(int id, String name, String place,  String description)
+    {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+
+    }
+
+    public Activities(int i) {
+        super();
     }
 
 
     //  getters y setters
 
+
+    public static HashMap getAct() {
+        return act;
+    }
+
+    public static void setAct(HashMap act) {
+        Activities.act = act;
+    }
+
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String getPlace() {
+        return place;
+    }
+
+    @Override
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    @Override
+    public String getCompany() {
+        return company;
+    }
+
+    @Override
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    @Override
+    public Double getPrice() {
+        return price;
+    }
+
+    @Override
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public String getDuration() {
@@ -44,14 +112,7 @@ public class Activities extends Product {
         this.description = description;
     }
 
-    public Activities(String name) {
-        this.name = name;
-    }
-
-
-
-
-        public static List<String> getActivities() {
+    public static List<String> getActivities() {
 
             // Lista de actividades
 
@@ -70,10 +131,8 @@ public class Activities extends Product {
 
 
 
-    public void setName(Activities activities) {
-    }
 
-    public void setName(HashMap act) {
-    }
+
+
 }
 

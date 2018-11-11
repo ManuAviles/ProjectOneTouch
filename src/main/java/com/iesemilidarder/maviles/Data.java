@@ -4,15 +4,14 @@ import com.iesemilidarder.maviles.data.Activities;
 import com.iesemilidarder.maviles.data.Country;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
 public class Data {
+/*
+    public  static List<Data> getProduct(){
 
-    public  static List<String> getProduct(){
-
-        List<String> lista = new ArrayList<String>();
+        List<Data> lista = new ArrayList<Data>();
 
 
            for ( int i = 0; i < Country.getCountries().size(); i++) {
@@ -25,11 +24,13 @@ public class Data {
 
                    Activities activities = new Activities();
                    activities.setName(Activities.act);
+
+                   System.out.println(+i+"" +x+ "");
                }
            }
 
         return lista;
     }
-
+*/
     }
 
