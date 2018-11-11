@@ -1,14 +1,18 @@
 package com.iesemilidarder.maviles.data;
 
+import com.iesemilidarder.maviles.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Country extends Product {
 
-    public static String count;
+    public static List<Data> count;
     private Integer code;
     private String name;
     private String capital;
+    private ArrayList<Country> countries;
+
 
 
     public Integer getCode() {
@@ -35,26 +39,34 @@ public class Country extends Product {
         this.capital = capital;
     }
 
-    public static List<String> getCountries() {
+
 
         // Lista de actividades
 
 
-        List<String> count = new ArrayList<String>();
+        public ArrayList getCcuntries () {
 
-        count.add("España");
-        count.add("Portugal");
-        count.add("Francia");
-        count.add("Alemania");
+            countries = new ArrayList<Country>();
+
+            List<String> count = new ArrayList<String>();
+
+            count.add("España");
+            count.add("Portugal");
+            count.add("Francia");
+            count.add("Alemania");
 
 
+            return countries;
+        }
 
-        return count;
-    }
+        public String setName ( int i){
+            return null;
+        }
 
-    public void setName(int i) {
-    }
 
-    public void setName(Country country) {
+        public int getName ( int i){
+
+            return i;
+
     }
 }

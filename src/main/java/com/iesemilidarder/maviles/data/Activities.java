@@ -1,15 +1,15 @@
 package com.iesemilidarder.maviles.data;
 
-import com.iesemilidarder.maviles.apiservices.ProductType;
+
+import com.iesemilidarder.maviles.Data;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
-import static com.iesemilidarder.maviles.apiservices.ProductType.getProductType;
+
 
 public class Activities extends Product {
-    public static HashMap act;
+    public static List<Data> act;
 
     // atributos
 
@@ -35,17 +35,14 @@ public class Activities extends Product {
         super();
     }
 
+    public Activities() {
+
+    }
+
+
 
     //  getters y setters
 
-
-    public static HashMap getAct() {
-        return act;
-    }
-
-    public static void setAct(HashMap act) {
-        Activities.act = act;
-    }
 
     @Override
     public int getId() {

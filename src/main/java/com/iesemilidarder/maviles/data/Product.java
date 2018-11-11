@@ -1,6 +1,5 @@
 package com.iesemilidarder.maviles.data;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Product {
@@ -51,9 +50,13 @@ public abstract class Product {
         Price = price;
     }
 
-    public void setName() {
+    public void setName(List<Activities> list2) {
+
+        return;
     }
 
-
+    public String setName(int x) {
+        return null;
+    }
 
 }

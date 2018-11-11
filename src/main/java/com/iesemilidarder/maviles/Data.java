@@ -3,34 +3,47 @@ package com.iesemilidarder.maviles;
 import com.iesemilidarder.maviles.data.Activities;
 import com.iesemilidarder.maviles.data.Country;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class Data {
-/*
-    public  static List<Data> getProduct(){
-
-        List<Data> lista = new ArrayList<Data>();
 
 
-           for ( int i = 0; i < Country.getCountries().size(); i++) {
 
 
-               Country country = new Country();
-               country.setName(Country.count);
 
-               for (int x = 0; x < Activities.getActivities().size(); x++) {
+    public static List<Data> getProduct() {
 
-                   Activities activities = new Activities();
-                   activities.setName(Activities.act);
+        List<Country> list = new ArrayList<>();
+        List<Activities> list2 = new ArrayList<>();
 
-                   System.out.println(+i+"" +x+ "");
-               }
-           }
+        List<Data> total = new ArrayList<>();
 
-        return lista;
+
+        for ( int i = 0; i < list.size(); i++) {
+
+
+            Country country = new Country();
+            country.setName(i);
+            total.add((Data) list);
+
+
+            for (int x = 0; x < list2.size(); x++) {
+
+                Activities activities = new Activities(i);
+                 activities.setName(x);
+
+                total.add((Data) list2);
+
+            }
+
+
+        }
+        return total;
     }
-*/
-    }
+
+
+}
 
