@@ -4,11 +4,15 @@ import java.util.List;
 
 public abstract class Product {
 
+    // Atributos
+
     protected Integer id;
     protected String name;
     protected String place;
     protected String company;
     protected Double Price;
+
+    // getters y setters
 
     public int getId() {
         return id;
@@ -55,8 +59,7 @@ public abstract class Product {
         return;
     }
 
-    public String setName(int x) {
-        return null;
-    }
 
+    public void setName(int i) {
+    }
 }

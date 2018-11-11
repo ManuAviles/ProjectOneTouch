@@ -12,11 +12,15 @@ import java.util.List;
 @RestController
 public class ProjectController {
 
+    // Para sacar los productos (no consigo que me devuelva los datos)
+
     @RequestMapping("/getProduct")
     public List<Data> getProduct() {
         List<Data> items = Data.getProduct();
         return items;
     }
+
+    // Para sacar los tipos de productos
 
     @RequestMapping("/getProductType")
     public List<Activities> getProductType() {
@@ -24,14 +28,13 @@ public class ProjectController {
         return items;
 }
 
-@RequestMapping(method = RequestMethod.GET, path = "Product/{id}")
-public List<Data> getProduct(Model mode, @PathVariable("id") int id){
+    // Para sacar un producto con una id especifica ( Tampoco me devuelve la información)
 
+    @RequestMapping(method = RequestMethod.GET, path = "/Product/{id}")
+    public List<Data> getProduct(Model mode, @PathVariable("id") int id){
     List<Data> items = Data.getProduct();
         return items;
 }
-
-
 
 }
 

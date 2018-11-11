@@ -8,7 +8,7 @@ import java.util.List;
 public class ProductType {
 
 
-
+    // Lista de los tipos de productos
 
     public static List<Activities> getProductType() {
 

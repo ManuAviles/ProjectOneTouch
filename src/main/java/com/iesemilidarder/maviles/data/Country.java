@@ -7,13 +7,15 @@ import java.util.List;
 
 public class Country extends Product {
 
+    // Atributos
+
     public static List<Data> count;
     private Integer code;
     private String name;
     private String capital;
     private ArrayList<Country> countries;
 
-
+    // getters y setters
 
     public Integer getCode() {
         return code;
@@ -41,12 +43,12 @@ public class Country extends Product {
 
 
 
-        // Lista de actividades
+        // Lista de paises
 
 
-        public ArrayList getCcuntries () {
+    public static List<String> getCountries() {
 
-            countries = new ArrayList<Country>();
+
 
             List<String> count = new ArrayList<String>();
 
@@ -56,17 +58,7 @@ public class Country extends Product {
             count.add("Alemania");
 
 
-            return countries;
+            return count;
         }
 
-        public String setName ( int i){
-            return null;
-        }
-
-
-        public int getName ( int i){
-
-            return i;
-
-    }
 }
