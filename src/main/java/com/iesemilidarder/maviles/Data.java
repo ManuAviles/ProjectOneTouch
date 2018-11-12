@@ -9,7 +9,7 @@ import java.util.List;
 
 
 public class Data {
-
+/*
     // Bucle para sacar Actividades + Paises
 
     public static List<Data> getProduct() {
@@ -24,16 +24,15 @@ public class Data {
 
 
             Country country = new Country();
-            country.setName(i);
-            total.add((Data) list);
+            country.setName(Country.count);
+
 
 
             for (int x = 0; x < list2.size(); x++) {
 
                 Activities activities = new Activities(i);
-                 activities.setName(x);
+                 activities.setName(Activities.act);
 
-                total.add((Data) list2);
 
             }
 
@@ -41,7 +40,7 @@ public class Data {
         }
         return total;
     }
-
+*/
 
 }
 

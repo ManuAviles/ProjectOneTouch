@@ -33,6 +33,7 @@ public class Country extends Product {
         this.name = name;
     }
 
+
     public String getCapital() {
         return capital;
     }
@@ -43,22 +44,6 @@ public class Country extends Product {
 
 
 
-        // Lista de paises
 
-
-    public static List<String> getCountries() {
-
-
-
-            List<String> count = new ArrayList<String>();
-
-            count.add("España");
-            count.add("Portugal");
-            count.add("Francia");
-            count.add("Alemania");
-
-
-            return count;
-        }
 
 }

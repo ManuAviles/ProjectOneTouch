@@ -28,17 +28,17 @@ public class Activities extends Product {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.place = place;
 
-    }
-
-    public Activities(int i) {
-        super();
     }
 
     public Activities() {
 
     }
 
+    public Activities(String place) {
+        super();
+    }
 
 
     //  getters y setters
@@ -93,6 +93,7 @@ public class Activities extends Product {
         this.price = price;
     }
 
+
     public String getDuration() {
         return duration;
     }
@@ -109,27 +110,15 @@ public class Activities extends Product {
         this.description = description;
     }
 
-    public static List<String> getActivities() {
+    public void setPlace(List<Activities> type) {
 
-            // Lista de actividades
+        return;
+    }
 
+    public void setId() {
+    }
 
-            List<String> act = new ArrayList<String>();
-
-            act.add("Escalada");
-            act.add("Buceo");
-            act.add("Surf");
-            act.add("Pescar");
-
-
-
-            return act;
-        }
-
-
-
-
-
-
+    public void setPlace() {
+    }
 }
 

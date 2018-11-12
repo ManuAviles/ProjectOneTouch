@@ -1,7 +1,5 @@
 package com.iesemilidarder.maviles.data;
 
-import java.util.List;
-
 public abstract class Product {
 
     // Atributos
@@ -54,12 +52,5 @@ public abstract class Product {
         Price = price;
     }
 
-    public void setName(List<Activities> list2) {
 
-        return;
-    }
-
-
-    public void setName(int i) {
-    }
 }
