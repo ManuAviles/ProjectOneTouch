@@ -1,19 +1,10 @@
 package com.iesemilidarder.maviles.data;
 
-
-import com.iesemilidarder.maviles.Data;
-
-import java.util.ArrayList;
-import java.util.List;
-
-
-
 public class Activities extends Product {
-    public static List<Data> act;
 
     // atributos
 
-    private Integer id;
+    private String id;
     private String name;
     private String place;
     private Double price;
@@ -23,7 +14,7 @@ public class Activities extends Product {
 
         // Constructor
 
-    public Activities(int id, String name, String place,  String description)
+    public Activities(String id, String name, String place,  String description)
     {
         this.id = id;
         this.name = name;
@@ -32,24 +23,15 @@ public class Activities extends Product {
 
     }
 
-    public Activities() {
-
-    }
-
-    public Activities(String place) {
-        super();
-    }
-
-
     //  getters y setters
 
 
     @Override
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -110,15 +92,6 @@ public class Activities extends Product {
         this.description = description;
     }
 
-    public void setPlace(List<Activities> type) {
 
-        return;
-    }
-
-    public void setId() {
-    }
-
-    public void setPlace() {
-    }
 }
 

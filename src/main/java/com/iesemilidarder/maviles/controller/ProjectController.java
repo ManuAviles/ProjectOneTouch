@@ -1,9 +1,8 @@
 package com.iesemilidarder.maviles.controller;
 
-
-import com.iesemilidarder.maviles.data.Activities;
 import com.iesemilidarder.maviles.data.Product;
 import com.iesemilidarder.maviles.data.ProductType;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -12,29 +11,30 @@ import java.util.List;
 @RestController
 public class ProjectController {
 
-    // Para sacar los productos
+    // Para sacar los productos por id
 
-    @RequestMapping(method = RequestMethod.GET, path = "/getProduct/{place}")
-    public List<Activities> ProductType(@PathVariable String place) {
-        return ProductType.getProductType();
+    @RequestMapping("/getProduct/{id}")
+    public Product ProductType(@PathVariable String id) {
+
+        return ProductType.getProductType(id);
     }
 
 
-    // Para sacar los tipos de productos
+    // Para sacar todos los productos
 
-    @RequestMapping("/getProductType")
-    public List<Activities> getProductType() {
-        List<Activities> items = ProductType.getProductType();
-        return items;
+    @RequestMapping("/getAllProduct")
+    public List<Product> getAllProducts() {
+        return ProductType.getAllProducts();
     }
 
-    // Para sacar un producto con una id especifica
-/*
-    @RequestMapping(method = RequestMethod.GET, path = "/Product/{id}")
-    public List<Activities> getProduct(Model mode, @PathVariable("id") int id) {
-        List<Activities> items = ProductType.ProductType();
-        return ProductType.ProductType().get(id);
+    // Para sacar un producto por país
+
+    @RequestMapping("/getProductArea/{place}")
+    public Product ProductArea(@PathVariable String place) {
+
+        return ProductType.getProductArea(place);
     }
-    */
+
+
 }
 

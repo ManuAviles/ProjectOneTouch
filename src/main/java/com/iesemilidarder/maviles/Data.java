@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Data {
 /*
-    // Bucle para sacar Actividades + Paises
+    // Bucle Viejo (No esta en uso)
 
     public static List<Data> getProduct() {
 

@@ -4,19 +4,19 @@ public abstract class Product {
 
     // Atributos
 
-    protected Integer id;
+    protected String id;
     protected String name;
     protected String place;
     protected String company;
-    protected Double Price;
+    protected Double price;
 
     // getters y setters
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -45,12 +45,13 @@ public abstract class Product {
     }
 
     public Double getPrice() {
-        return Price;
+        return price;
     }
 
     public void setPrice(Double price) {
-        Price = price;
+        price = price;
     }
+
 
 
 }

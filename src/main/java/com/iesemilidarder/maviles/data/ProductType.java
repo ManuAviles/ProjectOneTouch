@@ -1,36 +1,40 @@
 package com.iesemilidarder.maviles.data;
 
-import com.iesemilidarder.maviles.data.Activities;
-
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 
 public class ProductType  extends Product{
 
 
-    // Lista de los tipos de productos
+        // Lista de los productos
 
-    public static List<Activities> getProductType() {
+         static List<Product> productos = new ArrayList<Product>(Arrays.asList(
 
-         List<Activities> Type = new ArrayList<>();
+        new Activities("1", "Gastronomia", "España", "Comida de todos los lugares del mundo," ),
+        new Activities("2", "Ocio", "Francia", "Todo tipo de actividades"),
+        new Activities("3", "Hoteles", "Alemania", "Habitaciones, comidas y actividades de hoteles"),
+        new Activities("4", "Viajes", "Japon", "Todo tipo de comodidades mientras vuelas a tu destino")));
 
-        Type.add(new Activities(1, "Gastronomia", "España", "Comida de todos los lugares del mundo"));
-        Type.add(new Activities(2, "Ocio", "Francia", "Todo tipo de actividades"));
-        Type.add(new Activities(3, "Hoteles", "Alemania", "Habitaciones, comidas y actividades de hoteles"));
+         // Método de filtrar por ID
 
+    public static Product getProductType(String id){
 
-        for (Activities a : Type) {
-
-            return Type;
-        }
-
-        return Type;
-
-
+        return productos.stream().filter(t ->t.getId().equals(id)).findFirst().get();
     }
 
+        // Método para sacar todos los productos
 
+    public static List<Product> getAllProducts(){
 
+        return productos;
+    }
+
+        // Método de filtrar por País
+
+    public static Product getProductArea(String place){
+
+        return productos.stream().filter(t ->t.getPlace().equals(place)).findFirst().get();
+    }
 }
 
